@@ -1,0 +1,23 @@
+languageCode: "en-us"
+baseUrl: ""
+title: "Home"
+theme: "anubis"
+paginate: 10
+enableRobotsTXT: true
+
+params:
+  author: "Artem Derkach"
+  email: artem.derkach.gs@gmail.com # used for microformats
+  description: ""
+  dateFormat: "2006-01-02"
+  paginationSinglePost: true
+  style: dark
+  readMore: false
+  social:
+    - id: github
+      name: mind-rot
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # enable raw HTML in Markdown
