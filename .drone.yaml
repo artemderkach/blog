@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: klakegg/hugo
+  commands:
+  - cd website
+  - hugo
+
+- name: deploy
+  image: drillster/drone-rsync
+  hosts: [ "mindrot.dev" ]
+  #+   key: "-----BEGIN RSA PRIVATE KEY----- ...."
+  source: ./public
+  target: /app/blog
