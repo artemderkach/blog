@@ -1,4 +1,3 @@
-## Location
 [blog.mindrot.dev](https://blog.mindrot.dev)
 
 ## Prerequirements
