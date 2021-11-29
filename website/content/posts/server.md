@@ -80,4 +80,6 @@ Giving that our choice is self-hosted, we need to set up server first.
 
 Steps to set up [drone](https://www.drone.io/):
 - install it on server and expose using public IP
+- don't forget to install runners for executing builds
+- by default drone will be exposed for everyone, add whitelist for allowed users  
 - add API keys to cloud provider either in environment variables or environment file
