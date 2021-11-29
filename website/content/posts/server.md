@@ -1,7 +1,7 @@
 +++
 author = "Artem Derkach"
 title = "Expose App To The Internet"
-date = "2021-11-07"
+date = "2021-12-29"
 description = "Notes on how to deploy application"
 tags = [
     "deployment",
