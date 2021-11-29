@@ -6,7 +6,7 @@ paginate: 10
 enableRobotsTXT: true
 
 params:
-  author: "Artem Derkach"
+  author: "mindrot"
   email: artem.derkach.gs@gmail.com # used for microformats
   description: ""
   dateFormat: "2006-01-02"
