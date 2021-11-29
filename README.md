@@ -1,3 +1,5 @@
+[blog.mindrot.dev](https://blog.mindrot.dev)
+
 ## Prerequirements
 `$ git submodule update --remote` - to update the hugo theme module
 
