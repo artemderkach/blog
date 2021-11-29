@@ -2,10 +2,14 @@ kind: pipeline
 name: default
 
 steps:
+- name: submodules
+  image: alpine/git
+  commands:
+    - git submodule update --init --recursive
+
 - name: build
   image: klakegg/hugo
   commands:
-  - git submodule update --remote
   - cd website
   - hugo
 
