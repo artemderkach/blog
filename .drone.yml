@@ -5,6 +5,7 @@ steps:
 - name: build
   image: klakegg/hugo
   commands:
+  - git submodule update --remote
   - cd website
   - hugo
 
