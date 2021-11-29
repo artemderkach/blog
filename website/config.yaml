@@ -11,7 +11,7 @@ params:
   description: ""
   dateFormat: "2006-01-02"
   paginationSinglePost: true
-  style: dark
+  style: light
   readMore: false
   social:
     - id: github
