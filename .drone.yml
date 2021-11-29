@@ -11,6 +11,7 @@ steps:
 - name: deploy
   image: drillster/drone-rsync
   hosts: [ "mindrot.dev" ]
-  #+   key: "-----BEGIN RSA PRIVATE KEY----- ...."
+  key:
+    from_secret: PRIVATE_KEY
   source: ./public
   target: /app/blog
