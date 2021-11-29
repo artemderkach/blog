@@ -14,5 +14,5 @@ steps:
     hosts: [ "mindrot.dev" ]
     key:
       from_secret: PRIVATE_KEY
-    source: ./websity/public
+    source: ./website/public
     target: /app/blog
