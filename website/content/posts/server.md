@@ -6,6 +6,7 @@ description = "Notes on how to deploy application"
 tags = [
     "deployment",
 ]
+draft = true
 +++
 
 Notes on how to automate, deliver and make you app available for everyone.
