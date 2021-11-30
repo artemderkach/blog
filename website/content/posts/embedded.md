@@ -1,11 +1,12 @@
 +++
 author = "Artem Derkach"
 title = "Embedded Development"
-date = "2021-11-07"
+date = "2021-11-30"
 description = "Notes for setting embedded development workflow"
 tags = [
     "embedded",
 ]
+draft = true
 +++
 
 Notes for setting embedded development workflow. 
@@ -13,6 +14,8 @@ Notes for setting embedded development workflow.
 
 Notes below describing flow for `STM32F446RE` which is `STM32F` family. 
 Nevertheless, this notes can be used for other MCUs.
+<br><br>
+
 
 ## Content
 software components
@@ -27,6 +30,8 @@ software development components
 - flash
 - debug
 - microcontroller documentation
+<br><br>
+
 
 ## Libraries
 Libraries or Packs is a collection of software to help you with development:
