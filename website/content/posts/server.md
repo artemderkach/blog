@@ -24,8 +24,8 @@ Topics covered:
 - [SSL Certificate]({{< ref "#ssl-certificate" >}})
 - [Version Control]({{< ref "#version-control" >}})
 - [Application Wrapper]({{< ref "#application-wrapper" >}})
-- [Application Delivery Tool]({{< ref "#docker" >}})
 - [CI CD]({{< ref "#ci-cd" >}})
+- [Proxy]({{< ref "#proxy" >}})
 <br><br>
 
 ## Cloud Hosting
@@ -95,3 +95,17 @@ Steps to set up [drone](https://www.drone.io/):
 - don't forget to install runners for executing builds
 - by default drone will be exposed for everyone, add whitelist for allowed users  
 - add API keys to cloud provider either in environment variables or environment file
+
+At this point everything is set up, now we need to add steps into pipeline:
+- test
+- build
+- deploy
+<br><br>
+  
+
+## Proxy
+Proxy is essential if application consists of more than one server. Proxy will listen on the exposed port and map traffic to right services.
+
+Proxy is also a common place to manage ssl certificates. 
+
+As standard tool use [nginx](https://www.nginx.com/)
