@@ -6,7 +6,7 @@ description = "Notes for setting embedded development workflow"
 tags = [
     "embedded",
 ]
-draft = false
+draft = true
 +++
 
 Notes for setting embedded development workflow. 
