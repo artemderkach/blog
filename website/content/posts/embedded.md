@@ -20,7 +20,7 @@ Nevertheless, this notes can be used for other MCUs.
 ## Content
 software components
 - [Linker Script]({{< ref "#linker-script" >}})
-- startup file
+- [Startup File]({{< ref "#startup-file" >}})
 - [Libraries]({{< ref "#libraries" >}})
   
 software development components
@@ -37,6 +37,16 @@ software development components
 [article about linker script](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
 Linker script combines `.o` into single `.elf`.
 <br><br>
+
+## Startup File
+To better understand what is happening in startup file, we need to keep in mind what is happening before it.
+Here is few lines from about reset sequence:
+> After reset and before the processor starts executing the program, the Cortex-M
+processors read the first two words from the memory. The beginning of
+the memory space contains the vector table, and the first two words in the vector table are the
+initial value for the Main Stack Pointer (MSP), and the reset vector, which
+is the starting address of the reset handler. After these two words are read by the processor, the processor then
+sets up the MSP and the Program Counter (PC) with these values.
 
 
 ## Libraries
