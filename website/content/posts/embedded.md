@@ -22,6 +22,7 @@ software components
 - [Linker Script]({{< ref "#linker-script" >}})
 - [Startup File]({{< ref "#startup-file" >}})
 - [Libraries]({{< ref "#libraries" >}})
+- [Usage]({{< ref "#usage" >}})
   
 software development components
 - [Documentation]({{< ref "#documentation" >}})
@@ -47,7 +48,7 @@ the memory space contains the vector table, and the first two words in the vecto
 initial value for the Main Stack Pointer (MSP), and the reset vector, which
 is the starting address of the reset handler. After these two words are read by the processor, the processor then
 sets up the MSP and the Program Counter (PC) with these values.
-
+<br><br>
 
 ## Libraries
 Libraries or Packs is a collection of software to help you with development:
@@ -59,6 +60,14 @@ Libraries or Packs is a collection of software to help you with development:
 Packs for `STM32F`:
 - [STM32CubeF4](https://github.com/STMicroelectronics/STM32CubeF4)
 - [Keil Packs](https://www.keil.com/dd2/pack/) includes all available packs and can be used for different controllers
+<br><br>
+
+## Usage
+To use peripheral do next steps:
+- enable clock
+- enable bus
+- init peripheral
+<br><br>
 
 ## Documentation
 Documentation for controller can be gathered from [datasheet](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html) (`STM32F446RE`)
