@@ -36,8 +36,31 @@ software development components
 
 ## Linker Script
 [article about linker script](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
-Linker script combines `.o` into single `.elf`.
+Linker script combines `.o` into single `.elf`.<br>
+Main things to keep in mind is 2 parts form linker file:
+```
+MEMORY {
+	FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 512K
+	SRAM (rwx) : ORIGIN = 0x20000000, LENGTH = 128K
+}
+
+SECTIONS {
+	.isr_vector : {
+		*(.isr_vector)
+	} > FLASH
+
+	.text : {
+	    *(.text)
+	} > FLASH
+}
+```
+Not to be confused, `LENGTH` is defined in KibiBytes
 <br><br>
+
+### Common Options
+- `-T<file>` add a `<file>` to linker process
+- `-nostartfiles` do not use the standard system startup files when linking
+- 
 
 ## Startup File
 To better understand what is happening in startup file, we need to keep in mind what is happening before it.
@@ -63,14 +86,19 @@ Packs for `STM32F`:
 <br><br>
 
 ## Usage
-To use peripheral do next steps:
+Minimal steps to use peripheral:
 - enable clock
-- enable bus
-- init peripheral
+- set peripheral to be defined as one of function (input, output ...)
 <br><br>
 
 ## Documentation
-Documentation for controller can be gathered from [datasheet](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html) (`STM32F446RE`)
+Board should have 4 types of document:
+- datasheet
+- reference manual
+- user manual
+- programming manual
+Can be found on official site [here](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html).<br>
+Also [this site](https://doc.riot-os.org/group__boards__nucleo-f446re.html) go everything collected together.
 <br><br>
 
 
